@@ -1,20 +1,26 @@
 import React from 'react'
 import {nanoid} from 'nanoid'
 
-export default function Question({q, answerShown}) {
+export default function Question({q, answerShown, handleSelect}) {
     const [selected, setSelected] = React.useState("")
 
     const options = q.answers.map(ans => {
-        let id
+        let className
         if (answerShown) {
-            if (ans === selected) id = 'wrong'
-            if (ans === q['correct_answer']) id = 'correct'
-        } else if (ans === selected) id = 'selected'
+            className = 'shown'
+            if (ans === selected) className = 'wrong'
+            if (ans === q['correct_answer']) className = 'correct'
+        } else if (ans === selected) className = 'selected'
 
         return (
             <button 
-                onClick={() => answerShown || setSelected(ans)} 
-                id={id}
+                onClick={() => {
+                    if (!answerShown) {
+                        setSelected(ans)
+                        handleSelect(q.question, ans === q['correct_answer'])
+                    }
+                }} 
+                className={`answer-button ${className}`}
                 key={nanoid()}
             >
             {ans}
