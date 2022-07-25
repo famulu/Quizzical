@@ -4,7 +4,7 @@ import Question from './Question';
 export default function Quiz({ questions, reset }) {
   const [answersShown, setAnswersShown] = React.useState(false);
   const [correctlySelected, setCorrectlySelected] = React.useState({});
-  console.log(correctlySelected);
+  
   return (
     <div className="quiz">
       {questions.map((question) => (

@@ -17,7 +17,7 @@ export default function Question({q, answerShown, handleSelect}) {
                 onClick={() => {
                     if (!answerShown) {
                         setSelected(ans)
-                        handleSelect(q.question, ans === q['correct_answer'])
+                        handleSelect(q.id, ans === q['correct_answer'])
                     }
                 }} 
                 className={`answer-button ${className}`}
