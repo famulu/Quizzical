@@ -16,7 +16,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(./yellow-blob.svg), url(./blue-blob.svg);
+  background-image: url(./img/yellow-blob.svg), url(./img/blue-blob.svg);
   background-position: right top, left bottom;
   background-repeat: no-repeat, no-repeat;
 }
@@ -44,7 +44,7 @@
   flex-direction: column;
   gap: 16px;
   min-height: 100vh;
-  background-image: url(./yellow-blob-small.svg), url(./blue-blob-small.svg);
+  background-image: url(./img/yellow-blob-small.svg), url(./img/blue-blob-small.svg);
   background-position: right top, left bottom;
   background-repeat: no-repeat, no-repeat;
 }
