@@ -5,6 +5,7 @@ Quick start:
 ```shell
 npm install
 npm run build
+open index.html
 ````
 
 ## Development
